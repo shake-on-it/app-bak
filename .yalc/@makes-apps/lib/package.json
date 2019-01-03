@@ -1,0 +1,22 @@
+{
+  "name": "@makes-apps/lib",
+  "version": "0.0.46-d38a2182",
+  "description": "an app factory",
+  "author": "nick makes",
+  "license": "MIT",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "shx rm -rf dist",
+    "prebuild": "yarn run clean",
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "predeploy": "yarn run build",
+    "deploy": "yarn publish --access restricted"
+  },
+  "files": [
+    "dist"
+  ]
+}
